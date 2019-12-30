@@ -1,4 +1,6 @@
-# Cloud-SDK
+# foo0x29a/cloud-sdk
+
+Cloud-SDK
 
 ## Usage
 
@@ -8,7 +10,7 @@ $ docker run \
   --volume /PATH/TO/SERVICE_ACCOUNT.json:/DOCKER/PATH/TO/SERVICE_ACCOUNT.json \ 
   --env GOOGLE_CREDENTIALS=/DOCKER/PATH/TO/SERVICE_ACCOUNT.json \
   --env GOOGLE_PROJECT=$PROJECT_ID 
-  test \
+  foo0x29a/cloud-sdk \
   $COMMAND
 ```
 
@@ -23,6 +25,6 @@ $ docker run \
   -it --volume /PATH/TO/SERVICE_ACCOUNT.json:/tmp/credentials.json \
   --env GOOGLE_CREDENTIALS=/tmp/credentials.json \
   --env GOOGLE_PROJECT=foo-project \
-  test \
+  foo0x29a/cloud-sdk \
   gsutil mb gs://foo-bucket
 ```
