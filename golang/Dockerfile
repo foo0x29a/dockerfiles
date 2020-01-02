@@ -1,7 +1,7 @@
 FROM golang:1.13-alpine
 
 LABEL image='foo0x29a/golang'
-LABEL tag='1.13'
+LABEL tag='1.13.1'
 LABEL ref='https://github.com/foo0x29a/dockerfiles'
 
 ENV user='foo0x29a'
@@ -15,6 +15,9 @@ RUN addgroup --gid "${gid}" "${user}" \
     --gecos "" \
     --ingroup "$user" \
     --uid "$uid"
+
+RUN mkdir -p /.cache \
+    chmod 777 /.cache
 
 USER "${user}"
 WORKDIR "/home/${user}"
