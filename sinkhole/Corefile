@@ -1,0 +1,7 @@
+.:53 {
+    hosts adblock.hosts {
+        fallthrough
+    }
+
+    forward . 8.8.8.8:53
+}
